@@ -35,14 +35,15 @@ self.addEventListener('push', function(event) {
 
   if (event.data) {
     console.log(event.data.json());
+    var title = event.data.json().title;
+    console.log("title-test1", title);
+
+    var body = event.data.json().message;
+    console.log("body-test1", body);
+  } else {
+    var title = 'Push message-title';
+    var body = 'Message body-body'
   }
-
-  //var title = 'Push message-title';
-  var title = event.data.json().title;
-  console.log("title-test1", title);
-
-  var body = event.data.json().message;
-  console.log("body-test1", body);
 
   event.waitUntil(
     self.registration.showNotification(title, {

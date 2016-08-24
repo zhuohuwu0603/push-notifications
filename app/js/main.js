@@ -39,7 +39,7 @@ function subscribe() {
     console.log('Subscribed! Endpoint200:', sub.getKey('p256dh'));
     console.log('Subscribed! Endpoint201:', new Uint8Array(sub.getKey('p256dh')));
     subscribeButton.textContent = 'Unsubscribe';
-    //ßisSubscribed = true;
+    //isSubscribed = true;
   });
 }
 
