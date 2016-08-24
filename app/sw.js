@@ -33,11 +33,20 @@ self.addEventListener('activate', function(event) {
 self.addEventListener('push', function(event) {
   console.log('Push message', event);
 
-  var title = 'Push message-title';
+  if (event.data) {
+    console.log(event.data.json());
+  }
+
+  //var title = 'Push message-title';
+  var title = event.data.json().title;
+  console.log("title-test1", title);
+
+  var body = event.data.json().message;
+  console.log("body-test1", body);
 
   event.waitUntil(
     self.registration.showNotification(title, {
-      'body': 'The Message-body2',
+      'body': body,
       'icon': 'images/icon.png'
     }));
 });
