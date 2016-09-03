@@ -48,6 +48,6 @@ self.addEventListener('push', function(event) {
   event.waitUntil(
     self.registration.showNotification(title, {
       'body': body,
-      'icon': 'images/icon.png'
+      'icon': 'images/malecostume-512.png'
     }));
 });
