@@ -1,7 +1,5 @@
 'use strict';
 
-// TODO
-
 var reg;
 var sub;
 var isSubscribed = false;
